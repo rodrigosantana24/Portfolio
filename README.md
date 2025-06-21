@@ -3,7 +3,7 @@
 Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido com o objetivo de apresentar minhas habilidades, experiências, projetos e formas de contato de maneira moderna, acessível e profissional.
 
 ## 🌐 Acesse o Portfólio Online
-👉 [Clique aqui para visitar o portfólio](https://seu-link-aqui.com) 
+👉 [Clique aqui para visitar o portfólio](https://rodrigosantana24.github.io/Portfolio/) 
 
 ---
 
