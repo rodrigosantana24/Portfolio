@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Rodrigo Santana, um desenvolvedor Full-Stack apaixonado por criar soluções web inovadoras e eficientes.">
     <meta name="author" content="Rodrigo Santana">
-    
-    <title>Rodrigo Santana | Desenvolvedor Full-Stack</title>
-    
+    <title>Rodrigo Santana | Dev</title>
+    <link rel="icon" href="./img/code.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -15,7 +14,10 @@
 
     <header>
         <nav>
-            <a href="#hero" class="logo"><span>&lt;</span> Desenvolvedor FullStack <span>/&gt;</span></a>
+            <a href="#hero" class="logo"><span>&lt;</span> Rodrigo Santana <span>/&gt;</span></a>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#hero">Início</a></li>
                 <li><a href="#about">Sobre</a></li>
@@ -23,34 +25,32 @@
                 <li><a href="#projects">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
-            <div class="nav-controls">
-                <button class="menu-toggle" aria-label="Abrir menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
         </nav>
     </header>
 
     <main>
         <section id="hero" class="hero">
-            <div class="hero-content">
-                <div class="hero-title-photo">
-                    <img src="./img/eu.png" alt="Foto de Rodrigo Santana" class="hero-photo animate-on-scroll">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="animate-on-scroll">
+                        <span id="typed-text"></span><span class="cursor">|</span>
+                    </h1>
+                    <p data-animation-delay="1" class="animate-on-scroll">Desenvolvedor Full-Stack em constante aprendizado.</p>
+                    <a href="#contact" class="cta-button animate-on-scroll" data-animation-delay="2">Vamos trabalhar juntos!</a>
+                    <div class="social-links animate-on-scroll" data-animation-delay="3">
+                        <a href="https://www.linkedin.com/in/rodrigo-santana-280928233/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/rodrigosantana24" target="_blank" aria-label="GitHub" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" id="email-link" data-email="rodrigosantana.dev@gmail.com" aria-label="Copiar E-mail" title="Copiar E-mail">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
-                <h1 class="animate-on-scroll"><span id="typed-text"></span><span class="cursor">|</span></h1>
-                <p class="animate-on-scroll" data-animation-delay="1">Desenvolvedor Full-Stack apaixonado por criar soluções inovadoras.</p>
-                <a href="#contact" class="cta-button animate-on-scroll" data-animation-delay="2">Vamos trabalhar juntos!</a>
-                
-                <div class="social-links animate-on-scroll" data-animation-delay="3">
-                    <a href="https://www.linkedin.com/in/rodrigo-santana-280928233/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/rodrigosantana24" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" id="email-link" data-email="rodrigo.santana.dev24@gmail.com" aria-label="Copiar E-mail">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div class="hero-photo-container animate-on-scroll">
+                    <img src="./img/eu.png" alt="Foto de Rodrigo Santana" class="hero-photo">
                 </div>
             </div>
         </section>
@@ -58,12 +58,21 @@
         <section id="about" class="about-section animate-on-scroll">
             <h2 class="section-title">Sobre Mim</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>Olá! Sou um desenvolvedor full-stack com experiência na criação de aplicações web completas e robustas. Tenho paixão por aprender novas tecnologias e aplicá-las para resolver problemas do mundo real. Meu objetivo é sempre entregar um código limpo, eficiente e escalável.</p>
-                    <p>Quando não estou programando, gosto de explorar novas tecnologias, ler um bom livro de ficção científica ou praticar fotografia.</p>
-                </div>
                 <div class="about-image">
-                    <img src="./img/eu.png" alt="Foto profissional de Rodrigo Santana">
+                    <img src="./img/sobre.png" alt="Foto profissional de Rodrigo Santana">
+                </div>
+                <div class="about-text">
+                    <p>Sou um desenvolvedor web com experiência acadêmica na criação de aplicações fullstack completas e robustas. Tenho paixão por aprender novas tecnologias e aplicá-las para resolver problemas do mundo real.</p>
+
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-info">
+                            <h4>Bacharelado em Sistemas de Informação</h4>
+                            <p class="institution">UNIVERSIDADE FEDERAL RURAL DE PERNAMBUCO</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -76,59 +85,58 @@
                     <ul>
                         <li><i class="fab fa-html5"></i> HTML5</li>
                         <li><i class="fab fa-css3-alt"></i> CSS3</li>
-                        <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
                         <li><i class="fab fa-react"></i> React.js</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Backend</h3>
                     <ul>
-                        <li><i class="fab fa-node-js"></i> Node.js</li>
-                        <li><i class="fas fa-server"></i> Express.js</li>
-                        <li><i class="fas fa-cogs"></i> RESTful APIs</li>
-                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-java"></i> Java</li>
+                        <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Bancos de Dados & Ferramentas</h3>
                     <ul>
-                        <li><i class="fas fa-database"></i> MongoDB</li>
-                        <li><i class="fas fa-database"></i> PostgreSQL</li>
+                        <li class="sql-skill"><i class="fas fa-database"></i> SQL</li>
+                        <li class="mysql-skill"><i class="fas fa-database"></i> MYSQL</li>
                         <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
-                        <li><i class="fab fa-docker"></i> Docker</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects-section animate-on-scroll">
-            <h2 class="section-title">Projetos em Destaque</h2>
+            <h2 class="section-title">Projetos Pessoais e Acadêmicos</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x250/9a48ff/FFFFFF?text=Projeto+1" alt="Imagem do Projeto 1">
+                    <img src="./img/projeto-p.png" alt="Imagem do Projeto 1">
                     <div class="project-info">
-                        <h3>Nome do Projeto 1</h3>
-                        <p>Uma breve descrição do projeto, seus objetivos e os desafios que você superou para entregá-lo.</p>
+                        <h3>Projeto Pessoal</h3>
+                        <p>PetCare é uma plataforma web e mobile que conecta tutores de pets a cuidadores confiáveis durante ausências temporárias, 
+                            como viagens ou emergências. O sistema foi criado para facilitar o encontro entre quem precisa de ajuda e quem ama cuidar de animais.</p>
                         <div class="project-tech">
-                            <span>React</span><span>Node.js</span><span>MongoDB</span>
+                            <span>Java</span><span>JavaScript</span><span>HTML</span><span>CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" rel="noopener noreferrer">Ver Demo</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer">Código no GitHub</a>
+                            <a href="https://github.com/rodrigosantana24/PetCare" target="_blank" rel="noopener noreferrer">Link do GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x250/03dac6/121212?text=Projeto+2" alt="Imagem do Projeto 2">
+                    <img src="./img/projeto-a.png" alt="Imagem do Projeto 2">
                     <div class="project-info">
-                        <h3>Nome do Projeto 2</h3>
-                        <p>Uma breve descrição do projeto, as tecnologias utilizadas e o que você aprendeu com ele.</p>
-                        <div class="project-tech">
-                            <span>JavaScript</span><span>Express</span><span>PostgreSQL</span>
+                        <h3>Projeto Acadêmico</h3>
+                        
+                        <p>Ruralflix é um aplicativo criado para cinéfilos que desejam explorar o cinema de forma mais profunda e autêntica. 
+                            Com foco em personalização e descoberta, o app recomenda filmes para o usuário, 
+                            oferecendo uma busca inteligente e uma interface intuitiva que facilitam a navegação e a experiência.</p>
+                        
+                             <div class="project-tech">
+                            <span>React</span><span>JavaScript</span><span>TypeScript</span><span>Firebase</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" rel="noopener noreferrer">Ver Demo</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer">Código no GitHub</a>
+                            <a href="https://github.com/rodrigosantana24/projeto-dsi" target="_blank" rel="noopener noreferrer">Link do GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -137,8 +145,9 @@
 
         <section id="contact" class="contact-section animate-on-scroll">
             <h2 class="section-title">Entre em Contato</h2>
-            <p>Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para me enviar uma mensagem!</p>
-            <a href="mailto:rodrigo.santana.dev24@gmail.com" class="cta-button">Enviar um E-mail</a>
+            <p>Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para me enviar uma mensagem! </p>
+            <p>Contato: (81)98536-1435 - Recife/PE</p>
+            <a href="rodrigo-santana.pdf" download class="cta-button">Baixar Currículo</a>
         </section>
     </main>
 
@@ -146,7 +155,7 @@
         <p>&copy; 2025 - Desenvolvido por Rodrigo Santana</p>
     </footer>
 
-    <div id="copy-feedback">Email copiado!</div>
+    <div id="copy-feedback">E-mail copiado!</div>
 
     <script src="script.js"></script>
 </body>

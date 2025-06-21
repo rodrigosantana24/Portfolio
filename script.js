@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     function init() {
-        // A chamada para initThemeSwitcher() foi REMOVIDA
         initMobileMenu();
         initSmoothScrolling();
         initScrollAnimations();
@@ -9,18 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
         initEmailCopy();
     }
 
-    // A função initThemeSwitcher() foi completamente REMOVIDA
-
     function initMobileMenu() {
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-        
         if (!menuToggle || !navLinks) return;
-
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
-
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 if (navLinks.classList.contains('active')) {
@@ -48,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function initScrollAnimations() {
         const animatedElements = document.querySelectorAll('.animate-on-scroll');
         if (!animatedElements.length) return;
-
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -56,23 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => {
                         entry.target.classList.add('is-visible');
                     }, delay * 200);
-                    
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
-
         animatedElements.forEach(el => observer.observe(el));
     }
     
     async function initTypingAnimation() {
         const typedTextSpan = document.getElementById('typed-text');
-        if (!typedTextSpan) return;
-        
+        if (!typedTextSpan) return; 
         const phrases = [
             "Olá, eu sou Rodrigo Santana!",
-            "Desenvolvedor Full-Stack.",
-            "Vamos criar algo juntos."
+            "Desenvolvedor Full-Stack."
         ];
         let phraseIndex = 0;
 
@@ -99,13 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function initEmailCopy() {
         const emailLink = document.getElementById('email-link');
         const feedback = document.getElementById('copy-feedback');
-
         if (!emailLink || !feedback) return;
 
         emailLink.addEventListener('click', (event) => {
             event.preventDefault();
-            const email = emailLink.dataset.email;
-            
+            const email = emailLink.dataset.email;          
             navigator.clipboard.writeText(email).then(() => {
                 feedback.classList.add('show');
                 setTimeout(() => {
@@ -113,11 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 2000);
             }).catch(err => {
                 console.error('Falha ao copiar e-mail: ', err);
-                alert('Não foi possível copiar o e-mail. Por favor, copie manualmente.');
             });
         });
     }
-
-    // Inicia tudo!
     init();
 });
