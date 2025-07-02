@@ -407,7 +407,7 @@ section {
 }
 
 .project-info h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -425,12 +425,12 @@ section {
 }
 
 .project-tech span {
-    background-color: rgba(163, 87, 255, 0.15);
-    color: var(--primary-color);
+    color: var(--text-color-secondary);
+    border: 2px solid var(--primary-color);
     padding: .4rem .8rem;
-    border-radius: 15px;
-    font-size: .8rem;
-    font-weight: 500;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .project-links {

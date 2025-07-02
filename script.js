@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!typedTextSpan) return; 
         const phrases = [
             "Olá, me chamo Rodrigo!",
-            "Desenvolvedor Full-Stack."
+            "Desenvolvedor web."
         ];
         let phraseIndex = 0;
 
