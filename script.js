@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const typedTextSpan = document.getElementById('typed-text');
         if (!typedTextSpan) return; 
         const phrases = [
-            "Olá, me chamo Rodrigo!",
+            "Me chamo Rodrigo!",
             "Desenvolvedor web."
         ];
         let phraseIndex = 0;
