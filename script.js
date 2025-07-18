@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const typedTextSpan = document.getElementById('typed-text');
         if (!typedTextSpan) return; 
         const phrases = [
+            "Olá!",
             "Me chamo Rodrigo!",
-            "Desenvolvedor web."
         ];
         let phraseIndex = 0;
 
@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 typedTextSpan.textContent += currentPhrase[i];
                 await sleep(100);
             }
-            await sleep(1500);
+            await sleep(1000);
 
             for (let i = 0; i < currentPhrase.length; i++) {
                 typedTextSpan.textContent = typedTextSpan.textContent.slice(0, -1);
-                await sleep(50);
+                await sleep(40);
             }
-            await sleep(200);
+            await sleep(100);
 
             phraseIndex = (phraseIndex + 1) % phrases.length;
         }

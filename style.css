@@ -147,18 +147,17 @@ nav {
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--text-color-secondary);
     margin-bottom: 2.5rem;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .cta-button {
     background-color: var(--primary-color);
     color: #ffffff;
     padding: 1rem 2rem;
-    margin-top: 1.5rem;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -172,9 +171,9 @@ nav {
 
 .social-links {
     margin-top: 2rem;
-    margin-left: 2rem;
+    margin-left: 0.5rem;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .social-links a {
@@ -367,7 +366,7 @@ section {
 .fa-java { color: #F05032; } 
 .fa-js-square { color: #F7DF1E; }
 .fa-git-alt { color: #F05032; }
-
+.spring-icon { color: #6DB33F; }
 .sql-skill i { color: #00758F; } 
 .mysql-skill i { color: #00758F; } 
 
